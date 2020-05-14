@@ -948,7 +948,7 @@ transform: translate3d(40px, 0, 0);
     top: 70%;
   }
   .bulet blockquote{
-    top: 250%;
+    top: 200%;
     left: 85%;
     font-size: 25px;
   }
@@ -968,6 +968,6 @@ transform: translate3d(40px, 0, 0);
   }
   .theme-switch__label{
     top: 190%;
-    left: 170%;
+    left: 85%;
   }
 }
