@@ -33,19 +33,6 @@ body{
     display: flex;
 }
 
-.back{
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: azure;
-    background: linear-gradient(to bottom right, #444444, #353535,#292929, #1d1d1d);
-    background-size: 400% 400%;
-    animation: backgrount 10s ease-in-out infinite;
-}
 @keyframes backgrount{
     0%{
         background-position: 0 50%;
@@ -230,6 +217,7 @@ body{
     display: flex;
   }
   #dafaprasetya{
+    transition: 0.5s;
     width: 800px;
     height: 80px;
     font-family: "digital";
@@ -247,10 +235,11 @@ body{
     animation: nongol 3s 1;
   }
   #pengingat{
+    transition: 0.5s;
     width: 800px;
     height: 80px;
     font-family: "Montserrat";
-    color: #c9c9c9;
+    color: #ffffff;
     font-size: 40px;
     text-align: center;
     position: absolute;
@@ -259,11 +248,16 @@ body{
     transform: translate(-50%, -50%);
     animation: nongol 2s 1;
     cursor: pointer;
+    text-shadow: 0 0 5px #ff55b8,
+    0 0 10px #ff55b8,
+    0 0 50px #ff55b8,
+    0 0 100px #ff55b8;
   }
   #pengingat:active{
     animation: glic 2s steps(100) infinite;
   }
   #pm{
+    transition: 0.5;
     font-family: "digital";
     position: absolute;
     top: 5%;
@@ -601,13 +595,13 @@ body{
   }
 
   .bulet:active span:nth-child(1){
-    animation: gerak 1s linear infinite;
+    animation: gerak 0.5s linear infinite;
   }
   .bulet:active span:nth-child(2){
     animation: gerak 1s linear infinite;
   }
   .bulet:active span:nth-child(3){
-    animation: gerak 1s linear infinite;
+    animation: gerak 1.5s linear infinite;
   }
   @keyframes gerak{
     0%{
@@ -636,7 +630,7 @@ body{
     color: #ffffff;
     text-align: center;
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 50%;
     overflow: hidden;
     transform: translate(-50%, -30%);
@@ -744,6 +738,138 @@ transition: 0.5s;
   transition: 0.5s;
 }
 
+
+label,
+main {
+background: var(--bg, white);
+color: var(--text, black);
+	box-sizing:border-box;
+}
+
+main {
+--gradDark: #3f3f3f;
+--gradLight: rgb(36, 36, 36);
+background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+padding: 120px 40px 40px 40px;
+min-height: 100vh;
+text-align: center;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:-1;
+}
+
+.theme-switch__input:checked ~ main,
+.theme-switch__input:checked ~ label {
+--text: black;
+}
+.theme-switch__input:checked ~ .bulet blockquote{
+  color: black;
+}
+.theme-switch__input:checked ~ .box .pmdanwaktu #dafaprasetya,
+.theme-switch__input:checked ~ .box .pmdanwaktu #pm,
+.theme-switch__input:checked ~ .box #pengingat {
+  text-shadow: none;
+}
+.theme-switch__input:checked ~ label span{
+  color: black;
+  border: 3px solid black;
+}
+.theme-switch__input:checked ~ main {
+--gradDark: #AED581;
+--gradLight: #FBD988;
+}
+
+.theme-switch__input,
+.theme-switch__label {
+position: absolute;
+z-index: 1;
+}
+
+.theme-switch__input {
+opacity: 0;
+}
+.theme-switch__input:hover + .theme-switch__label, .theme-switch__input:focus + .theme-switch__label {
+background-color: rgb(73, 130, 187);
+}
+.theme-switch__input:hover + .theme-switch__label span::after, .theme-switch__input:focus + .theme-switch__label span::after {
+background-color: #d4ebf2;
+}
+
+.theme-switch__label {
+padding: 20px;
+margin: 60px;
+transition: background-color 200ms ease-in-out;
+width: 90px;
+height: 10px;
+border-radius: 50px;
+text-align: center;
+background-color: slateGray;
+box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+	position: absolute;
+	top: 85%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+	z-index:999;
+}
+.theme-switch__label::before, .theme-switch__label::after {
+font-size: 2rem;
+position: absolute;
+transform: translate3d(0, -50%, 0);
+top: 50%;
+}
+.theme-switch__label::before {
+  content: '\263E'; 
+  right: 110%; 
+  margin-left: 10px; 
+  color: lightblue;
+}
+.theme-switch__label::after {
+  content: '\263C';
+  left: 110%;
+  margin-right: 10px;
+  color: lightSlateGray;
+}
+.theme-switch__label span {
+border: 2px solid #ffffff;
+color: #ffffff;
+font-family: "mono";
+font-size: 15px;
+position: absolute;
+bottom: calc(100% + 10px);
+left: 0;
+width: 100%;
+}
+.theme-switch__label span::after {
+position: absolute;
+top: calc(100% + 15px);
+left: 5px;
+width: 35px;
+height: 35px;
+content: '';
+border-radius: 50%;
+background-color: lightBlue;
+transition: transform 200ms, background-color 200ms;
+box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.theme-switch__input:checked ~ .theme-switch__label {
+background-color: orange;
+}
+.theme-switch__input:checked ~ .theme-switch__label::before {
+color: lightSlateGray;
+}
+.theme-switch__input:checked ~ .theme-switch__label::after {
+color: orange;
+}
+.theme-switch__input:checked ~ .theme-switch__label span::after 
+
+{
+transform: translate3d(40px, 0, 0);
+}
+
 @media screen and (max-width: 1050px){
   .back{
     width: fit-content;
@@ -790,49 +916,58 @@ transition: 0.5s;
   .box{
     position: absolute;
     font-size: 15px;
-    top: 85%;
+    top: 95%;
     left: 100%;
     transform: translate(-50%, -50%);
   }
   .buble{
-    top: 100%;
+    top: 140%;
     left: 100%;
+    height: 200%;
+    width: 200%;
   }
   .bulet{
     left: 65%;
   }
   .bulet span:nth-child(1){
-    width: 400px;
-    height:400px;
-    left: 35%;
-    top: 55%;
+    width: 450px;
+    height:450px;
+    left: 30%;
+    top: 70%;
   }
   .bulet span:nth-child(2){
-    width: 400px;
-    height:400px;
-    left: 35%;
-    top: 55%;
+    width: 450px;
+    height:450px;
+    left: 30%;
+    top: 70%;
   }
   .bulet span:nth-child(3){
-    width: 400px;
-    height: 400px;
-    left: 35%;
-    top: 55%;
+    width: 450px;
+    height: 450px;
+    left: 30%;
+    top: 70%;
   }
   .bulet blockquote{
-    top: 200%;
-    left: 90%;
-    font-size: 20px;
+    top: 250%;
+    left: 85%;
+    font-size: 25px;
+  }
+  .bulet blockquote:hover{
+    background-color: white;
   }
   .bok{
     position: absolute;
     font-size: 15px;
-    top: 85%;
-    left: 80%;
+    top: 115%;
+    left: 100%;
     transform: translate(-50%, -50%);
   }
   .fitur{
-    top: 150%;
-    left: 10%;
+    top: 10%;
+    left: 100%;
+  }
+  .theme-switch__label{
+    top: 190%;
+    left: 85%;
   }
 }

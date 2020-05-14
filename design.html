@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/design.css">
 </head>
 <body>
-  <div class="back" id="back"></div>
+  <div id="body" class="dark-mode"></div>
   <div class="buble">
     <div class="bulet1">
       <div></div>
@@ -34,6 +34,17 @@
       <div></div>
     </div>
   </div>
+  
+  <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
+  <label for="themeSwitch" class="theme-switch__label">
+    <span>Ganti Tema</span>
+  </label>
+  
+  <main>
+    <div class="wrapper">
+    </div>
+  </main>
+  
   <div class="bulet">
     <span></span>
     <span></span>
@@ -47,7 +58,7 @@
   </div>
   <div class="box">
     <div class="pmdanwaktu">
-      <div id="dafaprasetya"></div>
+      <div id="dafaprasetya" class="dafaprasetya"></div>
       <div id="pm"></div>
     </div>
     <div id="pengingat"></div>
@@ -83,6 +94,7 @@
   <div class="fitur">
     <a onclick="clik()" href="#">Click me</a>
   </div>
+
   <script src="js/design.js"></script>
 </body>
 </html>
