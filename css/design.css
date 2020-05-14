@@ -235,8 +235,9 @@ body{
     animation: nongol 3s 1;
   }
   #pengingat{
-    transition: 0.5s;
-    width: 800px;
+    z-index: -1;
+    transition: 0.1s;
+    width: 400px;
     height: 80px;
     font-family: "Montserrat";
     color: #ffffff;
@@ -256,6 +257,20 @@ body{
   #pengingat:active{
     animation: glic 2s steps(100) infinite;
   }
+  #pengingat:hover{
+    font-size: 0;
+  }
+  #pengingat:hover::after{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 30px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    content: "dafa_prstya";
+    animation: glic 1s steps(100) infinite;
+  }
   #pm{
     transition: 0.5;
     font-family: "digital";
@@ -271,6 +286,7 @@ body{
     0 0 50px #55ebff;
     animation: nongol 4s 1;
   }
+
   .pmdanwaktu{
     position: absolute;
     top: 40%;
@@ -362,6 +378,10 @@ body{
 .youtubebox a:hover{
   color: red;
   background-color:  white;
+}
+.tes{
+  font-size: 20px;
+  display: none;
 }
 .bok a.a{
     position: absolute;
@@ -630,17 +650,18 @@ body{
     color: #ffffff;
     text-align: center;
     position: absolute;
-    top: 80%;
+    top: 90%;
     left: 50%;
     overflow: hidden;
-    transform: translate(-50%, -30%);
-    transition: 0.5s;
-    animation: glitch 2s steps(100) infinite;
+    transform: translate(-50%, -50%);
+    -webkit-transition: all .7s ease;
+    transition: 0.1s ;
   }
   .bulet blockquote:hover{
     color: black;
     animation: glic 2s steps(100) infinite;
   }
+
 
   .ganti{
     font-family: 'Source Code Pro', monospace;
@@ -694,7 +715,7 @@ body{
 .feel audio{
   background: none;
 }
-.musuk{
+.tema{
   font-family: 'Source Code Pro', monospace;
   font-size: 10px;
   width: 500px;
@@ -705,7 +726,7 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.musuk a{
+.tema a{
 position: absolute;
 top: 70%;
 left: 50%;
@@ -773,10 +794,6 @@ text-align: center;
 .theme-switch__input:checked ~ .box #pengingat {
   text-shadow: none;
 }
-.theme-switch__input:checked ~ label span{
-  color: black;
-  border: 3px solid black;
-}
 .theme-switch__input:checked ~ main {
 --gradDark: #AED581;
 --gradLight: #FBD988;
@@ -812,7 +829,8 @@ box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
 	top: 85%;
   left: 90%;
   transform: translate(-50%, -50%);
-	z-index:999;
+  z-index:999;
+display: none;
 }
 .theme-switch__label::before, .theme-switch__label::after {
 font-size: 2rem;
@@ -833,10 +851,6 @@ top: 50%;
   color: lightSlateGray;
 }
 .theme-switch__label span {
-border: 2px solid #ffffff;
-color: #ffffff;
-font-family: "mono";
-font-size: 15px;
 position: absolute;
 bottom: calc(100% + 10px);
 left: 0;
@@ -844,7 +858,7 @@ width: 100%;
 }
 .theme-switch__label span::after {
 position: absolute;
-top: calc(100% + 15px);
+top: calc(100% + 12px);
 left: 5px;
 width: 35px;
 height: 35px;
@@ -867,8 +881,62 @@ color: orange;
 .theme-switch__input:checked ~ .theme-switch__label span::after 
 
 {
-transform: translate3d(40px, 0, 0);
+transform: translate3d(45px, 0, 0);
 }
+
+.menu:hover, nav.menu.expanded {
+  height:50px;
+  overflow:hidden;
+  opacity:1;
+  }
+
+.menu {
+  display: flex;
+  background:#F7F7F7;
+  position:absolute;
+  bottom:0;
+  top: 0;
+  height:5px;
+  right:0;
+  width:100%;
+  overflow:hidden;
+  -webkit-transition:width .2s linear;
+  transition: width .2s linear;
+  -webkit-transform:translateZ(0) scale(1,1);
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
+    opacity:1;
+  opacity: 0;
+  }
+.menu a{
+  text-decoration: none;
+}
+.menu .logot{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 20px;
+  width: 80px;
+  background-color: red;
+}
+
+.lainnya{
+position: absolute;
+top: 90%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 20px;
+text-decoration: none;
+outline: none;
+color: white;
+font-family: sans-serif;
+width: 20px;
+height: 25px;
+border-radius: 20px;
+background-color: rgb(98, 0, 255);
+transition: 0.5s;
+}
+
 
 @media screen and (max-width: 1050px){
   .back{

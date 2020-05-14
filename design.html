@@ -35,9 +35,10 @@
     </div>
   </div>
   
+
   <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
-  <label for="themeSwitch" class="theme-switch__label">
-    <span>Ganti Tema</span>
+  <label for="themeSwitch" class="theme-switch__label" id="tema">
+    <span></span>
   </label>
   
   <main>
@@ -56,6 +57,7 @@
      </footer>
    </blockquote>
   </div>
+  <div class="tes">dafa</div>
   <div class="box">
     <div class="pmdanwaktu">
       <div id="dafaprasetya" class="dafaprasetya"></div>
@@ -63,6 +65,18 @@
     </div>
     <div id="pengingat"></div>
   </div>
+ <nav class="menu">
+  <a class="logot" href="index.html">
+    <span class="namamenu">Logout</span>
+  </a>
+  <a class="facebook" href="https://www.facebook.com/dafa.prasetya.31?ref=bookmarks">
+    <span class="namamenu">Facebook</span>
+  </a>
+  <a class="instagram" href="https://www.instagram.com/dafa_prstya/">
+    <span class="namamenu">Instagram</span>
+  </a>
+ </nav>
+
   <div id="bok" class="bok">
     <div class="youtubebox">
       <h1>Click youtube untuk ke youtube</h1>
@@ -76,10 +90,12 @@
       <h1>Click untuk saran</h1>
       <a href="https://api.whatsapp.com/send?phone=628157499858" >Saran</a>
     </div>
-    <div class="musuk">
-      <h1>click musik untuk ke menu musik</h1>
-      <a onclick="musik()" href="#">Musik</a>
+    <div class="tema">
+      <h1>click untuk tampilkan tombol ganti tema</h1>
+      <a onclick="gantitema()" onclick="musik()" href="#">Ganti</a>
     </div>
+      
+    <a class="lainnya" onclick="musik()" href="#">:</a>
     <div class="musik" id="musik">
       <a onclick="musik()" href="#" class="b">close</a>
       <div class="feel">

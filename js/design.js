@@ -102,10 +102,12 @@ function showTime(){
   function clik(){
     if(c == 0){
     document.getElementById('bok').style.display = "block"
+    document.getElementById('themeSwitch').style.display =  "block"
     c = 1
     }
     else{
       document.getElementById('bok').style.display = "none"
+      document.getElementById('themeSwitch').style.display = "none"
       c = 0
     }
   }
@@ -116,6 +118,16 @@ function showTime(){
     }
     else{
       document.getElementById('musik').style.display = "none"
+      c = 0
+    }
+  }
+  function gantitema(){
+    if(c == 0){
+    document.getElementById('tema').style.display =  "block"
+    c = 1
+    }
+    else{
+      document.getElementById('tema').style.display = "none"
       c = 0
     }
   }
