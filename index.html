@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="css/image/logo.png">
     <link rel="stylesheet" href="css/welcome.css">
+    <script src="https://kit.fontawesome.com/089a480d3f.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
 </head>
@@ -21,25 +22,33 @@
     <div class="box">
         <h1>Welcome</h1>
         <h2>enter your name</h2>
-        <form action="design.html">
-            <input placeholder="NAMA" class="nama" type="text" name="" id="nama">
-            <input onclick="login()" class="enter" id="enter" type="submit" value="MASUK">
-        </form>
+        <nav class="bok">
+            <input class="nama" type="text" name="" id="cari" placeholder="NAMA">
+            <input class="enter" type="submit" value="ENTER" onclick="makelink()">
+        </nav>
         <div class="garis"></div>
     </div>
 
 
 
     <script>
-        function login() {
-            yourName = document.getElementById("nama").value;
-        if (yourName == "" || !yourName)
-            alert("Sebaiknya isi nama terlebih dahulu, tetapi tidak apa-apa")
-        else if (yourName == "dafaprstya" || !yourName)
-            alert("Selamat datang Pembuat ku")
-        else
-            alert("Selamat Datang "+yourName)
-        }
+  function makelink(){
+    var nama = document.getElementById("cari").value
+    var url = "index.html"
+    var design = "design.html"
+    if(nama==""){
+        alert("Isi dulu namanya")
+        document.getElementById('link')
+    }
+    else if(nama=="dafaprstya"){
+        alert("selamat datang njeng")
+        window.location.href = design;
+    }
+    else{
+        alert("welcome "+nama)
+        window.location.href = design;
+    }
+}
     </script>
 </body>
 </html>

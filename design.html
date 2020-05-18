@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/design.css">
 </head>
 <body>
+  <div class="p"></div>
   <div id="body" class="dark-mode"></div>
   <div class="buble">
     <div class="bulet1">
@@ -65,51 +66,43 @@
     </div>
     <div id="pengingat"></div>
   </div>
- <nav class="menu">
-  <a class="logot" href="index.html">
-    <span class="namamenu">Logout</span>
-  </a>
-  <a class="facebook" href="https://www.facebook.com/dafa.prasetya.31?ref=bookmarks">
-    <span class="namamenu">Facebook</span>
-  </a>
-  <a class="instagram" href="https://www.instagram.com/dafa_prstya/">
-    <span class="namamenu">Instagram</span>
-  </a>
- </nav>
-
+   <div class="searchangine">
+      <input type="text" name="" onsubmit="makelink()" id="cari" placeholder="Mencari Sesuatu?">
+      <input type="submit" id="enter" value="cari" onclick="makelink()">
+    </div>
   <div id="bok" class="bok">
     <div class="youtubebox">
       <h1>Click youtube untuk ke youtube</h1>
-      <a href="https://youtube.com">Youtube</a>
+      <a target="_blank" href="https://youtube.com">Youtube</a>
     </div>
     <div class="githubbox">
       <h1>Click github untuk ke github</h1>
-      <a href="https://github.com/dafaprasetya">Github</a>
+      <a target="_blank" href="https://github.com/dafaprasetya">Github</a>
     </div>
     <div class="ganti">
       <h1>Click untuk saran</h1>
-      <a href="https://api.whatsapp.com/send?phone=628157499858" >Saran</a>
+      <a target="_blank" href="https://api.whatsapp.com/send?phone=628157499858" >Saran</a>
     </div>
     <div class="tema">
       <h1>click untuk tampilkan tombol ganti tema</h1>
       <a onclick="gantitema()" onclick="musik()" href="#">Ganti</a>
     </div>
-      
+    <a onclick="clik()" href="#" class="c">close</a>
     <a class="lainnya" onclick="musik()" href="#">:</a>
-    <div class="musik" id="musik">
-      <a onclick="musik()" href="#" class="b">close</a>
-      <div class="feel">
-        <h1>Fell Good</h1>
-        <audio controls loop>
-          <source src="musik/BG.mp3" type="audio/mp3">
-        </audio>
-      </div>
     </div>  
-    <a onclick="clik()" href="#" class="a">X</a>
   </div>
-  <div class="fitur">
+  <div id="fitur" class="fitur">
     <a onclick="clik()" href="#">Click me</a>
   </div>
+  <div class="musik" id="musik">
+    <a onclick="musik()" href="#" class="b">close</a>
+    <div class="feel">
+      <h1>Fell Good</h1>
+      <audio controls loop>
+        <source src="musik/BG.mp3" type="audio/mp3">
+      </audio>
+    </div>
+  </div>  
 
   <script src="js/design.js"></script>
 </body>
