@@ -84,7 +84,7 @@ function showTime(){
       waktu = "MAGRIBB?"
     }
     if(jam > 19){
-      waktu = "MALAM CINTUUU"
+      waktu = "NIGHT"
     }
     if(jam > 22){
       waktu = "Molor sia ajg"
@@ -166,43 +166,79 @@ function showTime(){
   setInterval(randomQuote, 2000);
   
 
-  function makelink(){
-    var search = document.getElementById("cari").value;
-    var url = "https://www.google.com/search?q="+search
-    var youtube = "https://youtube.com"
-    var facebook = "https://facebook.com"
-    var instagram = "https://instagram.com"
-    var nekopoi = "https://nekopoi.care"
+  function saran(){
+    var search = document.getElementById("saran").value;
+    var url = "https://api.whatsapp.com/send?phone=6281574999858&text="+search
     if(search==""){
         alert("isi dulu tong")
         document.getElementById('link')
     }
-    else if(search=="youtube"){
-        window.location.href = youtube;
-    }
-    else if(search=="nekopoi"){
-      alert('sebaiknya anda memakai VPN')
-      window.location.href = nekopoi
-    }
-    else if(search=="musik"){
-      document.getElementById('musik').style.display = "block"
-    }
-    else if(search=="facebook"){
-        window.location.href = facebook;
-    }
-    else if(search=="me"){
-        window.location.href = "https://www.facebook.com/dafa.prasetya.31?ref=bookmarks";
-    }
-    else if(search=="instagram"){
-        window.location.href = instagram;
-    }
-    else if(search=="ganti"){
-      document.getElementById('tema').style.display =  "block"
-    }
-    else if(search=="fitur"){
-      document.getElementById('bok').style.display =  "block"
-    }
     else{
         window.location.href = url;
     }
+}
+function sarantutup(){
+  if(c == 0){
+  document.getElementById('saranbox').style.display = "block"
+  c = 1
+  }
+  else{
+    document.getElementById('saranbox').style.display = "none"
+    c = 0
+  }
+}
+function makelink(){
+  var search = document.getElementById("cari").value;
+  var url = "https://www.google.com/search?q="+search
+  var youtube = "https://youtube.com"
+  var facebook = "https://facebook.com"
+  var instagram = "https://instagram.com"
+  var nekopoi = "https://nekopoi.care"
+  var github = "https://github.com"
+  var home = "index.html"
+  if(search==""){
+      alert("isi dulu tong")
+      document.getElementById('link')
+  }
+  else if(search=="youtube"){
+      window.location.href = youtube;
+  }
+  else if(search=="nekopoi"){
+    alert('sebaiknya anda memakai VPN')
+    window.location.href = nekopoi
+  }
+  else if(search=="musik"){
+    document.getElementById('musik').style.display = "block"
+  }
+  else if(search=="facebook"){
+      window.location.href = facebook;
+  }
+  else if(search=="me"){
+      window.location.href = "https://www.facebook.com/dafa.prasetya.31?ref=bookmarks";
+  }
+  else if(search=="instagram"){
+      window.location.href = instagram;
+  }
+  else if(search=="github"){
+    window.location.href = github;
+  }
+  else if(search=="kontol"){
+    alert("kasar lu, KELUAR!")
+    window.location.href = home;
+  }
+  else if(search=="ganti"){
+    document.getElementById('tema').style.display =  "none"
+  }
+  else if(search=="ganti "){
+    document.getElementById('tema').style.display =  "block"
+  }
+  else if(search=="fitur"){
+    document.getElementById('bok').style.display =  "block"
+  }
+  else if(search=="saran"){
+    document.getElementById('saranbox').style.display =  "block"
+  }
+  else{
+      window.location.href = url;
+  }
 }
