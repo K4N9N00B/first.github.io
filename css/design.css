@@ -1093,6 +1093,20 @@ transition: 0.5s;
   background-color: transparent;
   transition: 0.5s;
 }
+@keyframes cari21{
+  0%{
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%), rotate(0deg);
+    opacity: 1;
+  }
+  100%{
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 1;
+  }
+}
 @keyframes cari20{
   0%{
     top: 0%;
@@ -1101,7 +1115,7 @@ transition: 0.5s;
     opacity: 1;
   }
   100%{
-    top: 50%;
+    top: 20%;
     left: 125%;
     transform: translate(-50%, -50%) rotate(360deg);
     opacity: 1;
@@ -1126,11 +1140,11 @@ transition: 0.5s;
     font-size: 20px;
   }
   .bulet{
-    left: 45%;
+    left: 50%;
   }
   .bulet blockquote{
     top: 90%;
-    left: 60%;
+    left: 55%;
   }
   .bulet span:nth-child(1){
     width: 500px;
@@ -1146,6 +1160,15 @@ transition: 0.5s;
     width: 500px;
     height:500px;
     left: 0;
+  }
+  .searchangine{
+    top: 20%;
+    left: 50%;
+    animation: cari21 3s 1;
+  }
+  .theme-switch__label{
+    top: 80%;
+    left: 45%;
   }
 }
 @media screen and (max-width: 780px) {
