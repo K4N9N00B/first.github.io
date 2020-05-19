@@ -44,6 +44,18 @@ body{
         background-position: 0 50%;
     }
 }
+#particles-js{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  opacity: 100%;
+  transition: 1s;
+  z-index: 1;
+}
 .buble{
     display: flex;
     position: absolute;
@@ -53,6 +65,7 @@ body{
     height: 100%;
     width: 100%;
     background-color: transparent;
+    z-index: 1;
 }
 .bulet1{
     position: absolute;
@@ -189,17 +202,18 @@ body{
   }
   .box{
     background-color: transparent;
-    width: 800px;
+    width: 400px;
     height: 200px;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    z-index: 3;
   }
   #dafaprasetya{
     transition: 0.5s;
-    width: 800px;
+    width: 400px;
     height: 80px;
     font-family: "digital";
     color: #ffffff;
@@ -254,7 +268,7 @@ body{
     font-family: "digital";
     position: absolute;
     top: 0%;
-    left: 65%;
+    left: 75%;
     transform: translate(-50%, -50%);
     font-size: 40px;
     color: white;
@@ -271,7 +285,7 @@ body{
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 800px;
+    width: 400px;
     height: 80px;
     background-color: transparent;
     cursor: pointer;
@@ -338,6 +352,7 @@ body{
     box-shadow: 0 0 20px black;
     display: none;
     animation: fadein 0.5s 1;
+    z-index: 5;
 }
 .youtubebox a{
     position: absolute;
@@ -557,6 +572,7 @@ body{
     height: 500px;
     animation: fadein 3s 1;
     display: flex;
+    z-index: 2;
   }
   .bulet span:nth-child(1){
     position: absolute;
@@ -654,13 +670,16 @@ body{
     position: absolute;
     top: 90%;
     left: 50%;
-    overflow: hidden;
     transform: translate(-50%, -50%);
     -webkit-transition: all .7s ease;
     transition: 1s ;
   }
   .bulet blockquote:hover{
-    color: black;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px #e5ff55,
+    0 0 10px #e5ff55,
+    0 0 30px #e5ff55,
+    0 0 50px #e5ff55;
   }
   .bulet blockquote:active{
     color: black;
@@ -706,6 +725,7 @@ body{
   transform: translate(-50%, -50%);
   display: none;
   animation: fadein 0.5s 1;
+  z-index: 6;
 }
 .feel{
   width: 500px;
@@ -786,13 +806,15 @@ text-align: center;
 	bottom:0;
 	z-index:-1;
 }
-
+.theme-switch__input:checked ~ #particles-js{
+  
+}
 .theme-switch__input:checked ~ main,
 .theme-switch__input:checked ~ label {
 --text: black;
 }
 .theme-switch__input:checked ~ .bulet blockquote{
-	background: linear-gradient(to right, rgb(149, 56, 255), #ff24ab);
+	background: linear-gradient(to right, rgb(195, 255, 56), #24ff7f);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -802,18 +824,21 @@ text-align: center;
   box-shadow: none;
 }
 .theme-switch__input:checked ~ .bulet span:nth-child(2){
-  border: 2px solid #d8ff2d;
+  border: 2px solid #2dff61;
   box-shadow: none;
 }
 .theme-switch__input:checked ~ .bulet span:nth-child(3){
   border: 2px solid #ff2d73;
   box-shadow: none;
 }
+.theme-switch__input:checked ~ .bulet blockquote:hover{
+  text-shadow: none;
+}
 .theme-switch__input:checked ~ .box .pmdanwaktu #dafaprasetya,
 .theme-switch__input:checked ~ .box .pmdanwaktu #pm,
 .theme-switch__input:checked ~ .box #pengingat {
   text-shadow: none;
-  background: linear-gradient(to right, rgb(56, 192, 255), #ff248a);
+  background: linear-gradient(to right, rgb(195, 255, 56), #24ff7f);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -833,8 +858,8 @@ text-align: center;
   background-color: #5a5a5a;
 }
 .theme-switch__input:checked ~ main {
---gradDark: #AED581;
---gradLight: #FBD988;
+--gradDark: rgb(213, 129, 199);
+--gradLight: rgb(176, 136, 251);
 }
 
 .theme-switch__input,
@@ -907,13 +932,13 @@ box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 .theme-switch__input:checked ~ .theme-switch__label {
-background-color: orange;
+background-color: rgb(255, 128, 217);
 }
 .theme-switch__input:checked ~ .theme-switch__label::before {
 color: lightSlateGray;
 }
 .theme-switch__input:checked ~ .theme-switch__label::after {
-color: orange;
+color: rgb(255, 128, 217);
 }
 .theme-switch__input:checked ~ .theme-switch__label span::after 
 
@@ -932,6 +957,7 @@ transform: translate3d(45px, 0, 0);
   transition: 0.5s;
   padding: 10px;
   animation: cari 2.5s 1;
+  z-index: 4;
  }
  .searchangine:hover > #cari {
    width: 240px;
@@ -966,6 +992,9 @@ transform: translate3d(45px, 0, 0);
   transition: 0.5s;
   outline: none;
   cursor: pointer;
+}
+.searchangine #enter:active{
+  animation: fadein 3s 1;
 }
 @keyframes cari{
   0%{
@@ -1011,6 +1040,7 @@ transition: 0.5s;
   display: flex;
   border-radius: 20px;
   display: none;
+  z-index: 7;
 }
 .saranbox h1{
   font-family: 'Source Code Pro', monospace;
@@ -1066,13 +1096,13 @@ transition: 0.5s;
 @keyframes cari20{
   0%{
     top: 0%;
-    left: 115%;
+    left: 125%;
     transform: translate(-50%, -50%), rotate(0deg);
     opacity: 1;
   }
   100%{
     top: 50%;
-    left: 115%;
+    left: 125%;
     transform: translate(-50%, -50%) rotate(360deg);
     opacity: 1;
   }
@@ -1123,21 +1153,24 @@ transition: 0.5s;
     position: absolute;
     font-size: 15px;
     top: 95%;
-    left: 110%;
+    left: 125%;
     transform: translate(-50%, -50%);
+  }
+  #pm{
+    left: 80%;
   }
   .buble{
     top: 140%;
-    left: 110%;
-    height: 200%;
+    left: 120%;
     width: 200%;
+    height: 200%;
   }
   .bulet{
     width: 500px;
     height:500px;
     position: absolute;
     top: 110%;
-    left: 115%;
+    left: 125%;
     transform: translate(-50%, -50%);
     animation: fadein 5s 1;
   }
@@ -1162,28 +1195,24 @@ transition: 0.5s;
   .bulet blockquote{
     left: 50%;
   }
-  .bulet blockquote:hover{
-    background-color: white;
-  }
   .bok{
     position: absolute;
     font-size: 15px;
     top: 120%;
-    left: 115%;
+    left: 125%;
     transform: translate(-50%, -50%);
   }
   .fitur{
     top: 10%;
-    left: 110%;
+    left: 125%;
   }
   .theme-switch__label{
     top: 200%;
-    left: 95%;
+    left: 115%;
   }
   .searchangine{
     top: 50%;
-    left: 115%;
-    z-index: 1;
+    left: 125%;
     animation: cari20 3s 1;
   }
   .searchangine:hover > #cari {
@@ -1199,5 +1228,18 @@ transition: 0.5s;
     }
    .searchangine:hover{
      left: 120%;
+   }
+   #particles-js{
+     display: none;
+   }
+   #res{
+    opacity: 0%;
+    width: 300%;
+    height: 600%;
+    position: absolute;
+    left: 100%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
    }
 }

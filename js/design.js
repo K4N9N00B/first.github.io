@@ -229,6 +229,9 @@ function makelink(){
   else if(search=="github"){
     window.location.href = github;
   }
+  else if(search=="particle effect"){
+    window.location.href = "https://github.com/VincentGarreau/particles.js/";
+  }
   else if(search=="kontol"){
     alert("kasar lu, KELUAR!")
     window.location.href = home;
