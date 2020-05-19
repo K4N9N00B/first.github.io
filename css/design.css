@@ -548,18 +548,21 @@ body{
   .bulet{
     background-color: transparent;
     align-items: center;
+    justify-content: center;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     animation: fadein 3s 1;
+    display: flex;
   }
   .bulet span:nth-child(1){
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 10%;
+    top: 10%;
+    transform: translate(-50%, -50%);
     width: 400px;
     height:400px;
     background-color: transparent;
@@ -576,8 +579,9 @@ body{
   }
   .bulet span:nth-child(2){
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 10%;
+    top: 10%;
+    transform: translate(-50%, -50%);
     width: 400px;
     height:400px;
     background-color: transparent;
@@ -594,8 +598,9 @@ body{
   }
   .bulet span:nth-child(3){
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 10%;
+    top: 10%;
+    transform: translate(-50%, -50%);
     width: 400px;
     height:400px;
     background-color: transparent;
@@ -655,6 +660,9 @@ body{
     transition: 1s ;
   }
   .bulet blockquote:hover{
+    color: black;
+  }
+  .bulet blockquote:active{
     color: black;
     animation: glic 2s steps(100) infinite;
   }
@@ -1055,6 +1063,20 @@ transition: 0.5s;
   background-color: transparent;
   transition: 0.5s;
 }
+@keyframes cari20{
+  0%{
+    top: 0%;
+    left: 115%;
+    transform: translate(-50%, -50%), rotate(0deg);
+    opacity: 1;
+  }
+  100%{
+    top: 50%;
+    left: 115%;
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 1050px){
   .back{
     width: fit-content;
@@ -1097,45 +1119,48 @@ transition: 0.5s;
   }
 }
 @media screen and (max-width: 780px) {
-  
   .box{
     position: absolute;
     font-size: 15px;
     top: 95%;
-    left: 100%;
+    left: 110%;
     transform: translate(-50%, -50%);
   }
   .buble{
     top: 140%;
-    left: 100%;
+    left: 110%;
     height: 200%;
     width: 200%;
   }
   .bulet{
-    left: 65%;
+    width: 500px;
+    height:500px;
+    position: absolute;
+    top: 110%;
+    left: 115%;
+    transform: translate(-50%, -50%);
+    animation: fadein 5s 1;
   }
   .bulet span:nth-child(1){
     width: 450px;
     height:450px;
-    left: 30%;
-    top: 70%;
+    left: 5%;
+    top: 5%;
   }
   .bulet span:nth-child(2){
     width: 450px;
     height:450px;
-    left: 30%;
-    top: 70%;
+    left: 5%;
+    top: 5%;
   }
   .bulet span:nth-child(3){
     width: 450px;
     height: 450px;
-    left: 30%;
-    top: 70%;
+    left: 5%;
+    top: 5%;
   }
   .bulet blockquote{
-    top: 200%;
-    left: 85%;
-    font-size: 25px;
+    left: 50%;
   }
   .bulet blockquote:hover{
     background-color: white;
@@ -1143,40 +1168,36 @@ transition: 0.5s;
   .bok{
     position: absolute;
     font-size: 15px;
-    top: 115%;
-    left: 100%;
+    top: 120%;
+    left: 115%;
     transform: translate(-50%, -50%);
   }
   .fitur{
     top: 10%;
-    left: 100%;
+    left: 110%;
   }
   .theme-switch__label{
-    top: 190%;
-    left: 85%;
+    top: 200%;
+    left: 95%;
   }
   .searchangine{
-    height: 50px;
-    padding: 15px;
-    top: 30%;
-    left: 105%;
+    top: 50%;
+    left: 115%;
     z-index: 1;
+    animation: cari20 3s 1;
   }
   .searchangine:hover > #cari {
-    width: 340px;
-    height: 50px;
+    width: 240px;
     padding: 0 6px;
    }
    .searchangine:hover > #enter {
-     width: 50px;
-     height: 50px;
      background: #ffffff;
      position: absolute;
-     left: 92%;
-     transform: translateX(-50%);
-     font-size: 50px
+     left: 93%;
+     top: 50%;
+     transform: translate(-50%, -50%);
     }
    .searchangine:hover{
-     left: 110%;
+     left: 120%;
    }
 }

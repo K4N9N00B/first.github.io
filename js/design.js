@@ -195,6 +195,7 @@ function makelink(){
   var instagram = "https://instagram.com"
   var nekopoi = "https://nekopoi.care"
   var github = "https://github.com"
+  var terjemah = "https://translate.google.com/"
   var home = "index.html"
   if(search==""){
       alert("isi dulu tong")
@@ -202,6 +203,12 @@ function makelink(){
   }
   else if(search=="youtube"){
       window.location.href = youtube;
+  }
+  else if(search=="terjemah"){
+    window.location.href = terjemah;
+  }
+  else if(search=="translate"){
+    window.location.href = terjemah;
   }
   else if(search=="nekopoi"){
     alert('sebaiknya anda memakai VPN')
@@ -213,7 +220,7 @@ function makelink(){
   else if(search=="facebook"){
       window.location.href = facebook;
   }
-  else if(search=="me"){
+  else if(search=="dafa"){
       window.location.href = "https://www.facebook.com/dafa.prasetya.31?ref=bookmarks";
   }
   else if(search=="instagram"){
