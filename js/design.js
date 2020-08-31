@@ -27,8 +27,7 @@ function showTime(){
     document.getElementById("dafaprasetya").textContent = time;
   }
   
-  setInterval(showTime, 1000);
-  showTime();
+
 
   function pm(){
       date = new Date();
@@ -43,7 +42,7 @@ function showTime(){
     document.getElementById('pm').innerText = naon;
     document.getElementById('pm').textContent = naon;
   }
-  pm();
+ 
 
   function ingat(){
     date = new Date();
@@ -51,43 +50,13 @@ function showTime(){
     waktu = "malam cintaqu"
   
     if(jam == 0){
-      waktu = "Tidur udah malam"
+      waktu = ">/////<"
     }
-    if(jam > 3){
-      waktu = "SAHOOOOOOOR"
+    if(jam == 22){
+      waktu = ">/////<"
     }
-    if(jam == 4){
-      waktu = "salat subuh"
-    }
-    if(jam > 5){
-      waktu = "PAGI CANTIQ"
-    }
-    if(jam > 8){
-      waktu = "jangan lupa mandi"
-    }
-    if(jam > 9){
-      waktu = "menjelang siang cintaqu"
-    }
-    if(jam > 11){
-      waktu = "SIANG beb"
-    }
-    if(jam > 15){
-      waktu = "SEKARANG MENJELANG SORE YA?"
-    }
-    if(jam == 16){
-      waktu = "SOREEE Beb"
-    }
-    if(jam == 17){
-      waktu = "SOREE"
-    }
-    if(jam == 18){
-      waktu = "MAGRIBB?"
-    }
-    if(jam > 19){
-      waktu = "NIGHT"
-    }
-    if(jam > 22){
-      waktu = "Molor sia ajg"
+    else{
+      waktu = ">/////<"
     }
   
   
@@ -136,24 +105,12 @@ function showTime(){
 
   const quotes = [
     {
-      "quote": "Iri Bilang BOSS",
-      "source": "#editorberkelas"
+      "quote": "Love You",
+      "source": "Bilaa"
     },
     {
-      "quote": "Puas kalian hina Idol kami?",
-      "source": "Fans BaTueS"
-    },
-    {
-      "quote": "No System Is Safe",
-      "source": "Onanymus"
-    },
-    {
-      "quote": "Bila kau lihat kekiri maka kau akan melewatkan yang kanan",
-      "source": "Patrick star"
-    },
-    {
-      "quote": "Kalau motor Gw berisik emang ngapa?",
-      "source": "Kang Mberrr"
+      "quote": "love you",
+      "source": "BIlaa"
     },
   ]
   
@@ -189,6 +146,7 @@ function sarantutup(){
 }
 function makelink(){
   var search = document.getElementById("cari").value;
+  var suc = document.getElementById("cari").value;
   var url = "https://www.google.com/search?q="+search
   var youtube = "https://youtube.com"
   var facebook = "https://facebook.com"
@@ -201,14 +159,27 @@ function makelink(){
       alert("isi dulu tong")
       document.getElementById('link')
   }
-  else if(search=="youtube"){
+  else if(search=="youtube" && suc=="ucup"){
       window.location.href = youtube;
+  }
+  else if(search=="Youtube"){
+    window.location.href = youtube;
+  }
+  else if(search=="Terjemah"){
+    window.location.href = terjemah;
+  }
+  else if(search=="Translate"){
+    window.location.href = terjemah;
   }
   else if(search=="terjemah"){
     window.location.href = terjemah;
   }
   else if(search=="translate"){
     window.location.href = terjemah;
+  }
+  else if(search=="Nekopoi"){
+    alert('sebaiknya anda memakai VPN')
+    window.location.href = nekopoi
   }
   else if(search=="nekopoi"){
     alert('sebaiknya anda memakai VPN')
@@ -217,38 +188,60 @@ function makelink(){
   else if(search=="musik"){
     document.getElementById('musik').style.display = "block"
   }
+    else if(search=="Musik"){
+    document.getElementById('musik').style.display = "block"
+  }
   else if(search=="facebook"){
       window.location.href = facebook;
+  }
+  else if(search=="Facebook"){
+    window.location.href = facebook;
   }
   else if(search=="dafa"){
       window.location.href = "https://www.facebook.com/dafa.prasetya.31?ref=bookmarks";
   }
-  else if(search=="instagram"){
+  else if(search=="Instagram"){
       window.location.href = instagram;
   }
-  else if(search=="github"){
+  else if(search=="Github"){
     window.location.href = github;
   }
   else if(search=="particle effect"){
     window.location.href = "https://github.com/VincentGarreau/particles.js/";
   }
-  else if(search=="kontol"){
+  else if(search=="Kontol"){
     alert("kasar lu, KELUAR!")
     window.location.href = home;
   }
-  else if(search=="ganti"){
+  else if(search=="Ganti"){
     document.getElementById('tema').style.display =  "none"
   }
-  else if(search=="ganti "){
+  else if(search=="Ganti "){
     document.getElementById('tema').style.display =  "block"
   }
-  else if(search=="fitur"){
+  else if(search=="Fitur"){
     document.getElementById('bok').style.display =  "block"
   }
-  else if(search=="saran"){
+  else if(search=="Saran"){
     document.getElementById('saranbox').style.display =  "block"
   }
   else{
       window.location.href = url;
   }
 }
+
+document.addEventListener("click", function(kkk){
+  const body = document.getElementById('luv')
+  body.addEventListener('click', function(kkk){
+    let x = kkk.offsetX
+    let y = kkk.offsetY
+
+    let ripples = document.createElement('span')
+    ripples.style.left = x + 'px';
+    ripples.style.top = y + 'px';
+    this.appendChild(ripples)
+    setTimeout(() => {
+      ripples.remove()
+    },2000)
+  })
+})
