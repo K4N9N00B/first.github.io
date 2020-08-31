@@ -734,7 +734,6 @@ body{
     0 0 50px #e5ff55;
   }
   .bulet blockquote:active{
-    a
     color: black;
     animation: glic 2s steps(100) infinite;
   }

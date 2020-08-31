@@ -105,12 +105,16 @@ function showTime(){
 
   const quotes = [
     {
-      "quote": "Love You",
-      "source": "Bilaa"
+      "quote": "Hehe",
+      "source": "Dafaprstya"
     },
     {
       "quote": "love you",
-      "source": "BIlaa"
+      "source": "this is proof"
+    },
+    {
+      "quote": "love you",
+      "source": ">////<"
     },
   ]
   
