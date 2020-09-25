@@ -27,7 +27,8 @@ function showTime(){
     document.getElementById("dafaprasetya").textContent = time;
   }
   
-
+  setInterval(showTime, 1000);
+  showTime();
 
   function pm(){
       date = new Date();
@@ -42,7 +43,7 @@ function showTime(){
     document.getElementById('pm').innerText = naon;
     document.getElementById('pm').textContent = naon;
   }
- 
+  pm();
 
   function ingat(){
     date = new Date();
@@ -50,13 +51,13 @@ function showTime(){
     waktu = "malam cintaqu"
   
     if(jam == 0){
-      waktu = ">/////<"
+      waktu = "Tidur udah malam"
     }
     if(jam == 22){
-      waktu = ">/////<"
+      waktu = "belum tidur?"
     }
     else{
-      waktu = ">/////<"
+      waktu = "Love You"
     }
   
   
@@ -105,16 +106,12 @@ function showTime(){
 
   const quotes = [
     {
-      "quote": "Hehe",
-      "source": "Dafaprstya"
+      "quote": "Love You",
+      "source": "Gw"
     },
     {
       "quote": "love you",
-      "source": "this is proof"
-    },
-    {
-      "quote": "love you",
-      "source": ">////<"
+      "source": "GW"
     },
   ]
   
