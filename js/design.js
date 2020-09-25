@@ -27,6 +27,34 @@ function showTime(){
     document.getElementById("dafaprasetya").textContent = time;
   }
   
+  function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s ;
+    
+  
+  
+  
+    document.getElementById("jam").innerText = time;
+    document.getElementById("jam").textContent = time;
+  }
   setInterval(showTime, 1000);
   showTime();
 
@@ -43,7 +71,7 @@ function showTime(){
     document.getElementById('pm').innerText = naon;
     document.getElementById('pm').textContent = naon;
   }
-  pm();
+ 
 
   function ingat(){
     date = new Date();
@@ -51,13 +79,13 @@ function showTime(){
     waktu = "malam cintaqu"
   
     if(jam == 0){
-      waktu = "Tidur udah malam"
+      waktu = ">/////<"
     }
     if(jam == 22){
-      waktu = "belum tidur?"
+      waktu = ">/////<"
     }
     else{
-      waktu = "Love You"
+      waktu = ">/////<"
     }
   
   
@@ -66,6 +94,60 @@ function showTime(){
     document.getElementById("pengingat").textContent = oon;
   }
   ingat();
+  function inget(){
+    date = new Date();
+    jam = date.getHours()
+    waktu = "malam cintaqu"
+    
+
+    if(jam == 23){
+      waktu = "jangan beggadang!"
+    }
+    else if(jam == 00){
+      waktu = "Dibilangin Jangan Begadang!!"
+    }
+    else if(jam >= 22){
+      waktu = "Jangan Begadang"
+    }
+    else if(jam >= 01){
+      waktu = "Tiduur!!"
+    }
+    else if(jam >= 06){
+      waktu = "Solat subuh dulu^^"
+    }
+    else if(jam >= 05){
+      waktu = "Pagiii"
+    }
+    else if(jam >= 08){
+      waktu = "Pagiii, Jangan Lupa Makan^^"
+    }
+    else if(jam >= 10){
+      waktu = "Selamat pagi menjelang siang^^"
+    }
+    else if(jam >= 12){
+      waktu = "Sianggg"
+    }
+    else if(jam >= 13){
+      waktu = "Tidur siang dulu sana dan jangan lupa makan^^"
+    }
+    else if(jam == 15){
+      waktu = "Udah bangun?,"
+    }
+    else if(jam >= 16){
+      waktu = "Mandi sana"
+    }
+    else if(jam >= 18){
+      waktu = "solat"
+    }
+    else{
+      waktu = "Malamm^^"
+    }
+  
+    var oon = waktu
+    document.getElementById("inget").innerText = oon;
+    document.getElementById("inget").textContent = oon;
+  }
+  inget();
 
 
   var c = 0;
@@ -106,12 +188,16 @@ function showTime(){
 
   const quotes = [
     {
-      "quote": "Love You",
-      "source": "Gw"
+      "quote": "Hehe",
+      "source": "Dafaprstya"
     },
     {
       "quote": "love you",
-      "source": "GW"
+      "source": "this is proof"
+    },
+    {
+      "quote": "love you",
+      "source": ">////<"
     },
   ]
   
