@@ -101,7 +101,7 @@ function showTime(){
     
 
     if(jam == 23){
-      waktu = "jangan beggadang!"
+      waktu = "jangan begadang!"
     }
     else if(jam == 00){
       waktu = "Dibilangin Jangan Begadang!!"
@@ -138,6 +138,10 @@ function showTime(){
     }
     else if(jam >= 18){
       waktu = "solat"
+    }
+    else if(jam == 19){
+      waktu = "malam"
+
     }
     else{
       waktu = "Malamm^^"
@@ -197,6 +201,10 @@ function showTime(){
     },
     {
       "quote": "love you",
+      "source": ">////<"
+    },
+    {
+      "quote": "Bilaaa",
       "source": ">////<"
     },
   ]
