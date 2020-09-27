@@ -100,15 +100,11 @@ function showTime(){
     waktu = "malam cintaqu"
     
 
-    if(jam == 23){
-      waktu = "jangan begadang!"
-    }
+ 
     if(jam == 0){
       waktu = "Dibilangin Jangan Begadang!!"
     }
-    if(jam >= 22){
-      waktu = "Jangan Begadang"
-    }
+
     if(jam >= 1){
       waktu = "Tiduur!!"
     }
@@ -145,8 +141,15 @@ function showTime(){
     }
     if(jam >= 20){
       waktu = "Malam^^"
-   
-  
+    }
+    if(jam >= 22){
+      waktu = "Jangan Begadang"
+    }
+    if(jam == 23){
+      waktu = "jangan begadang!"
+    }
+
+
     var oon = waktu
     var jjam = jam
     document.getElementById("test").innerText = jjam;
