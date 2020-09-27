@@ -38,14 +38,14 @@ function showTime(){
         h = 12;
     }
     
-    if(h > 12){
+    else if(h > 12){
         h = h - 12;
         session = "PM";
     }
     
     h = (h < 10) ? "0" + h : h;
     m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
+    s = (s < 10) ? "0" + s : s; 
     
     var time = h + ":" + m + ":" + s ;
     
@@ -103,53 +103,54 @@ function showTime(){
     if(jam == 23){
       waktu = "jangan begadang!"
     }
-    else if(jam == 00){
+    if(jam == 0){
       waktu = "Dibilangin Jangan Begadang!!"
     }
-    else if(jam >= 22){
+    if(jam >= 22){
       waktu = "Jangan Begadang"
     }
-    else if(jam >= 01){
+    if(jam >= 1){
       waktu = "Tiduur!!"
     }
-    else if(jam >= 06){
+    if(jam == 6){
       waktu = "Solat subuh dulu^^"
     }
-    else if(jam >= 05){
+    if(jam >= 5){
       waktu = "Pagiii"
     }
-    else if(jam >= 08){
+    if(jam >= 8){
       waktu = "Pagiii, Jangan Lupa Makan^^"
     }
-    else if(jam >= 10){
+    if(jam >= 10){
       waktu = "Selamat pagi menjelang siang^^"
     }
-    else if(jam >= 12){
+    if(jam >= 12){
       waktu = "Sianggg"
     }
-    else if(jam >= 13){
+    if(jam >= 13){
       waktu = "Tidur siang dulu sana dan jangan lupa makan^^"
     }
-    else if(jam == 15){
+    if(jam == 15){
       waktu = "Udah bangun?,"
     }
-    else if(jam >= 16){
+    if(jam >= 16){
       waktu = "Mandi sana"
     }
-    else if(jam >= 18){
+    if(jam >= 18){
       waktu = "solat"
     }
-    else if(jam == 19){
+    if(jam == 19){
       waktu = "malam"
 
     }
-    else{
-      waktu = "Malamm^^"
-    }
+   
   
     var oon = waktu
+    var jjam = jam
+    document.getElementById("test").innerText = jjam;
+    document.getElementById("test").textContent = jjam;
     document.getElementById("inget").innerText = oon;
-    document.getElementById("inget").textContent = oon;
+    ///document.getElementById("inget").textContent = oon;
   }
   inget();
 
