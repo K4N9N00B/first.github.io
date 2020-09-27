@@ -131,7 +131,7 @@ function showTime(){
       waktu = "Tidur siang dulu sana dan jangan lupa makan^^"
     }
     if(jam == 15){
-      waktu = "Udah bangun?,"
+      waktu = "Udah bangun?"
     }
     if(jam >= 16){
       waktu = "Mandi sana"
@@ -140,9 +140,11 @@ function showTime(){
       waktu = "solat"
     }
     if(jam == 19){
-      waktu = "malam"
+      waktu = "Malam"
 
     }
+    if(jam >= 20){
+      waktu = "Malam^^"
    
   
     var oon = waktu
